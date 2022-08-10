@@ -45,7 +45,9 @@ function map(array, cb) {
   // El nuevo array debe tener la misma longitud que el array del argumento
   //Tu código:
   let nuevoArray = []
-  array.map(cb => nuevoArray.push(cb))
+  array.map((elemento) => {
+    nuevoArray.push(cb(elemento));
+  })
   return nuevoArray
 }
 
